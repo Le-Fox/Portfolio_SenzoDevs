@@ -5,7 +5,6 @@ export default function Home() {
     <div>
       <main>
         <Header/>
-        {/* Header */}
 
         {/* Hero */}
 
