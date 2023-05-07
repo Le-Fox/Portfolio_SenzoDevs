@@ -1,5 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -21,24 +22,32 @@ function ExperienceCard({}: Props) {
 
 
         className='w-32 h-32 rounded-full  xl:w-[200px] xl:h-[200px] object-cover object-center'
-         src="https://cdn.sanity.io/images/ltuexkre/production/050ee674d199aa8d254af2b5ea480d3dc320cbb1-1240x1440.png" alt="" />
+         src="/senzo.png" alt="" />
 
          <div className='px-0 md:px-10'>
             <h4 className='text-4xl font-light'>Junior Developer</h4>
             <p className='font-bold text-2xl mt-1'>SoftServe-Digital</p>
             <div className='flex space-x-2 my-2'>
-                <img
+            <Image
                 className='h-10 w-10 rounded-full' 
-                src="https://cdn.sanity.io/images/ltuexkre/production/6077d4327de2a7b28008b4235fa6c6dd5d381e7e-500x500.png" alt="" />
-                                <img
+                width={50}
+                height={50}
+                src="/senzo.png" alt="" />
+                <Image
                 className='h-10 w-10 rounded-full' 
-                src="https://cdn.sanity.io/images/ltuexkre/production/6077d4327de2a7b28008b4235fa6c6dd5d381e7e-500x500.png" alt="" />
-                                <img
+                width={50}
+                height={50}
+                src="/senzo.png" alt="" />
+                <Image
                 className='h-10 w-10 rounded-full' 
-                src="https://cdn.sanity.io/images/ltuexkre/production/6077d4327de2a7b28008b4235fa6c6dd5d381e7e-500x500.png" alt="" />
-                                <img
+                width={50}
+                height={50}
+                src="/senzo.png" alt="" />
+                <Image
                 className='h-10 w-10 rounded-full' 
-                src="https://cdn.sanity.io/images/ltuexkre/production/6077d4327de2a7b28008b4235fa6c6dd5d381e7e-500x500.png" alt="" />
+                width={50}
+                height={50}
+                src="/senzo.png" alt="" />
             </div>
             <p>Started work... -Ended...</p>
             {/* make hieght scrollable */}
