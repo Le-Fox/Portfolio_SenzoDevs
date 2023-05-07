@@ -26,21 +26,21 @@ function Header({}: Props) {
         className="flex flex-row place-items-center">
         <SocialIcon
         url="https://github.com/Le-Fox"
-        fgColor='gray'
+        fgColor='green'
         bgColor='transparent'
         />
         <SocialIcon
         url="https://github.com/Le-Fox"
-        fgColor='gray'
+        fgColor='green'
         bgColor='transparent'
         />
         <SocialIcon
         url="https://github.com/Le-Fox"
-        fgColor='gray'
+        fgColor='green'
         bgColor='transparent'
         /><SocialIcon
         url="https://github.com/Le-Fox"
-        fgColor='gray'
+        fgColor='green'
         bgColor='transparent'
         />
         </motion.div>
@@ -62,14 +62,14 @@ function Header({}: Props) {
           duration:1.5
         }}
         
-        className="flex flex-row items-center text-gray-300 cursor-pointer">
+        className="flex flex-row items-center text-green-300 cursor-pointer">
         <SocialIcon
         className='cursor-pointer'
         network='email'
-        fgColor='gray'
+        fgColor='green'
         bgColor='transparent'
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <p className="uppercase hidden md:inline-flex text-sm text-green-600">
         get in touch
         </p>
         </motion.div>
