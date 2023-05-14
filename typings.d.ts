@@ -49,14 +49,13 @@ export interface Project extends SanityBody{
 export interface PageInfo extends SanityBody {
     _type: 'pageInfo';
     address: string;
+    role: string;
     backgroundInformation: string;
     email: string;
     heroImage: Image;
     name: string;
     phoneNumber: string;
     profilePicture: Image;
-
-
 }
 
 export interface Social extends SanityBody{

@@ -1,9 +1,13 @@
 import React from 'react'
 import {motion} from 'framer-motion'
+import { PageInfo } from '../../typings'
+import pageInfo from '../../sanity/schemas/pageInfo'
 
-type Props = {}
+type Props = {
+  pageInfo:PageInfo
+}
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
   return (
     <motion.div
     
@@ -47,7 +51,7 @@ function About({}: Props) {
         <h4 className='text-4xl font-semibold '>Here is a <span className='underline decoration-green-300 animate-pulse'>little</span> background</h4>
 
         <p className='text-base'>
-          what it do baby
+          {pageInfo.backgroundInformation}
         </p>
       </div>
 

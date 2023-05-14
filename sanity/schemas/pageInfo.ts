@@ -24,8 +24,8 @@ export default defineType({
       }
     }),
     defineField({
-      name: 'backgroundInfromation',
-      title: 'BackgroundInfromation',
+      name: 'backgroundInformation',
+      title: 'BackgroundInformation',
       type: 'string',
     }),
     defineField({
