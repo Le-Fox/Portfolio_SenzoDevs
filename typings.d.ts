@@ -7,6 +7,7 @@ interface SanityBody{
 
 interface Image{
     _type: 'image';
+    [key: string]: unknown
     asset:{
         _ref: string;
         _type: 'reference'
