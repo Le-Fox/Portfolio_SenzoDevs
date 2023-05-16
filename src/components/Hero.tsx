@@ -23,7 +23,8 @@ function Hero({pageInfo}: Props) {
         <BackgroundCircles/>
         <Image
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src={'/senzo.png' }
+        src={urlForImage(pageInfo.heroImage).url()}
+        //src='/senzo.png' 
         width={100}
         height={50}
         alt='Cartooned image of Senzo'
