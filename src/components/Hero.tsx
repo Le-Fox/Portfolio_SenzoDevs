@@ -23,14 +23,14 @@ function Hero({pageInfo}: Props) {
         <BackgroundCircles/>
         <Image
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src={urlForImage(pageInfo.heroImage).url()}
+        src={urlForImage(pageInfo?.heroImage).url()}
         //src='/senzo.png' 
         width={100}
         height={50}
         alt='Cartooned image of Senzo'
         />
         <div className='z-20'>
-            <h2 className='text-sm uppercase  pb-2 tracking-[15px]'>{pageInfo.role}</h2>
+            <h2 className='text-sm uppercase  pb-2 tracking-[15px]'>{pageInfo?.role}</h2>
             <h1 className='flex justify-center items-center text-5xl lg:text-6xl font-semibold px-10'>
                 {/* add press play font to this below text */}
                 <span className='mr-3 tracking-widest'>{text}</span>

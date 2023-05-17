@@ -51,7 +51,7 @@ function About({pageInfo}: Props) {
         <h4 className='text-4xl font-semibold '>Here is a <span className='underline decoration-green-300 animate-pulse'>little</span> background</h4>
 
         <p className='text-base'>
-          {pageInfo.backgroundInformation}
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
 

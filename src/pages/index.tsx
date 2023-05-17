@@ -56,7 +56,7 @@ export default function Home({pageInfo,experiences,projects,skills,socials}:Prop
 }
 
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export  const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experiences[] = await fetchExperience();
   const skills: Skill[] = await fetchSkills();
@@ -65,7 +65,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props:{
-      pageInfo,experiences,skills,projects,socials,
+      pageInfo,
+      experiences,
+      skills,
+      projects,
+      socials,
     },
     revalidate:5000
   }

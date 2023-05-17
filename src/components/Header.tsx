@@ -30,8 +30,8 @@ function Header({socials,pageInfo}: Props) {
         className="flex flex-row place-items-center">
           {socials.map((social) =>(
             <SocialIcon
-            key={social._id}
-            url={social.url}
+            key={social?._id}
+            url={social?.url}
             fgColor='green'
             bgColor='transparent'
             />
@@ -58,7 +58,7 @@ function Header({socials,pageInfo}: Props) {
         className="flex flex-row items-center text-green-300 cursor-pointer">
         <SocialIcon
         className='cursor-pointer'
-        url={pageInfo.email}
+        url={pageInfo?.email}
         fgColor='green'
         bgColor='transparent'
         />
