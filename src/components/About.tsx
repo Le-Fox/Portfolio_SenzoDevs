@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import { PageInfo } from '../../typings'
-import pageInfo from '../../sanity/schemas/pageInfo'
+
 
 type Props = {
   pageInfo:PageInfo
