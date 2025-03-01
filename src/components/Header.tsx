@@ -8,66 +8,44 @@ type Props = {
   pageInfo:PageInfo
 }
 
-function Header({socials,pageInfo}: Props) {
+function Header({socials, pageInfo}: Props) {
   return (
-    <div className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
-        <motion.div
-        initial={{
-          x: -500,
-          opacity: 0,
-          scale: 0.5
-        }}
-        animate={{
-          x:0,
-          opacity:1,
-          scale: 1
-        }}
-
-        transition={{
-          duration: 1.5
-        }}
-        
-        className="flex flex-row place-items-center">
-          {socials.map((social) =>(
-            <SocialIcon
-            key={social?._id}
-            url={social?.url}
-            fgColor='green'
+    <header className="sticky top-0 p-5 flex items-start justify-between 
+    mx-auto z-20 xl:items-center xl:relative xl:max-w-none xl:p-0 xl:mb-6">
+      <motion.div
+        initial={{x: -500, opacity: 0, scale: 0.5}}
+        animate={{x: 0, opacity: 1, scale: 1}}
+        transition={{duration: 1.5}}
+        className="flex flex-row items-center"
+      >
+        {socials.map((social) => (
+          <SocialIcon
+            key={social._id}
+            url={social.url}
+            fgColor='#22c55e'
             bgColor='transparent'
-            />
-          ))}
-        </motion.div>
+            className="mx-1"
+          />
+        ))}
+      </motion.div>
 
-        <motion.div
-        
-        initial={{
-          x:500,
-          opacity: 0,
-          scale: 0.5
-        }}
-
-        animate={{
-          scale: 1,
-          x: 0,
-          opacity: 1
-        }}
-        transition={{
-          duration:1.5
-        }}
-        
-        className="flex flex-row items-center text-green-300 cursor-pointer">
+      <motion.div
+        initial={{x: 500, opacity: 0, scale: 0.5}}
+        animate={{x: 0, opacity: 1, scale: 1}}
+        transition={{duration: 1.5}}
+        className="flex flex-row items-center text-green-300 cursor-pointer"
+      >
         <SocialIcon
-        className='cursor-pointer'
-        url={pageInfo?.email}
-        fgColor='green'
-        bgColor='transparent'
+          className='cursor-pointer'
+          network="email"
+          fgColor='#22c55e'
+          bgColor='transparent'
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-green-600">
-        get in touch
+        <p className="uppercase hidden md:inline-flex text-sm text-[#22c55e] font-semibold">
+          Get In Touch
         </p>
-        </motion.div>
-
-    </div>
+      </motion.div>
+    </header>
   )
 }
 

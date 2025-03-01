@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import ExperienceCard from './ExperienceCard'
-import { Experience } from '../../typings'
+import type { Experience } from '../../typings'
 
 type Props = {
   experiences:Experience[]
@@ -9,19 +9,16 @@ type Props = {
 
 function Experience({experiences}: Props) {
   return (
-    <motion.div 
-    initial={{opacity:0}}
-    whileInView={{opacity:1}}
-    transition={{duration:1.5}}
-    className='h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center border-4'>
-      <h3 className='absolute top-8 uppercase tracking-[20px] h-[20%] text-2xl ml-6'>Experience</h3>
+    <motion.div className='relative flex flex-col text-left max-w-full xl:pt-10'>
+      <h3 className='uppercase tracking-[20px] text-2xl text-center xl:text-left mb-8'>
+        Experience
+      </h3>
 
-      <div className='w-full h-[80%] flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory bottom-5
-
-       scrollbar-track-green-500/20 scrollbar-thin  scrollbar-thumb-green-700/80'>
-       {experiences.map((experiences) =>(
-        <ExperienceCard key={experiences?._id} experiences={experiences}/>
-       ))} 
+      <div className='w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory 
+      scrollbar-track-gray-500/20 scrollbar-thin scrollbar-thumb-[#22c55e]/80'>
+        {experiences.map((experience) =>(
+          <ExperienceCard key={experience?._id} experiences={experience}/>
+        ))} 
       </div>
     </motion.div>
   )

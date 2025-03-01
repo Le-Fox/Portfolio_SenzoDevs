@@ -28,32 +28,35 @@ type Props = {
 
 export default function Home({pageInfo,experiences,projects,skills,socials}:Props) {
   return (
-    <div className="text-green-600 bg-black h-screen snap-y snap-mandatory overflow-scroll z-0  scrollbar-track-green-500/20 scrollbar-thin  scrollbar-thumb-green-700/80">
-      <main>
-        <Header socials={socials} pageInfo={pageInfo}  />
-        <section id="hero" className="snap-start">
-        <Hero pageInfo={pageInfo}/>
-        </section>
-        <section id="about" className="snap-center">
-        <About pageInfo={pageInfo}/>
-        </section>
-        <section id="experience" className="snap-center">
-          <Experience experiences={experiences} />
-        </section>
-        <section id="skills" className="snap-center">
-          <Skills skills = {skills}/>
-        </section>
-        <section id="projects" className="snap-center">
-          <Projects projects = {projects}/>
-        </section> 
-
-        <Link href={'#hero'}>
-        <footer className="sticky bottom-5 w-full cursor-pointer z-30">
-          <div className=" flex items-center justify-center">
-            <Image className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0" src={urlForImage(pageInfo?.heroImage).url()}  width={50} height={50} alt="" />
+    <div className="text-gray-200 bg-[#111827] min-h-screen">
+      <main className="max-w-6xl mx-auto px-2 md:px-4">
+        {/* Desktop/Laptop layout */}
+        <div className="lg:flex lg:gap-4">
+          {/* Left side - content */}
+          <div className="lg:w-5/12 lg:sticky lg:top-0 lg:h-screen">
+            <div className="lg:py-4">
+              <Header socials={socials} pageInfo={pageInfo} />
+              <section id="hero" className="snap-start h-screen lg:h-[calc(100vh-4rem)]">
+                <Hero pageInfo={pageInfo}/>
+              </section>
+            </div>
           </div>
-        </footer>
-        </Link>
+
+          {/* Right side - content */}
+          <div className="lg:w-7/12 space-y-32 lg:space-y-40 lg:pt-40 lg:py-20 
+          snap-y snap-mandatory overflow-y-scroll scrollbar-thin 
+          scrollbar-track-gray-400/20 scrollbar-thumb-[#22c55e]/80">
+            <section id="experience" className="snap-start">
+              <Experience experiences={experiences} />
+            </section>
+            <section id="skills" className="snap-start">
+              <Skills skills={skills}/>
+            </section>
+            <section id="projects" className="snap-start">
+              <Projects projects={projects}/>
+            </section>
+          </div>
+        </div>
       </main>
     </div>
   )
